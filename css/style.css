@@ -1,0 +1,753 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+:root {
+  --heading: rgb(0 10 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --black: #212529;
+  --helper: #8490ff;
+  --overlay: #3e64ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --icons-bg: rgba(144, 172, 209, 0.2);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport: -webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+html {
+  font-size: 62.5%;
+  /* 1 rem = 10px  */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "poppins", sans-serif;
+}
+h1 {
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 9rem 0;
+}
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-three-column {
+  grid-template-columns: repeat(3, 2fr);
+}
+.grid-four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+.btn {
+  background: var(--gradientSupport);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  color: var(--helper-tint);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.btn:hover,
+.btn:active {
+  box-shadow: var(--shadowSupport);
+}
+
+/* //  ------------------------------------------
+---------  header area css start from here -------
+------------------------------------------------- // */
+.mobile-navbar-btn {
+  display: none;
+}
+#nav_close_icon {
+  display: none;
+}
+header {
+  display: flex;
+  padding: 0px 4.8rem;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+}
+.logo {
+  height: 3rem;
+}
+.logo h2 {
+  font-size: 4rem;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 4.8rem;
+}
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: color 0.3s linear;
+  font-family: "poppins";
+}
+.navbar-link:hover,
+.navbar-link:active {
+  color: var(--helper);
+}
+
+/* //  ------------------------------------------
+---------  header are css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+---------  hero section  css start here -------
+------------------------------------------------- // */
+
+.section_hero {
+  background-color: var(--bg);
+}
+.hero_section_content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero_section_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero_section_img img {
+  width: 80%;
+  text-align: center;
+}
+
+.herosec_top_data {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--helper);
+  font-size: 1.5rem;
+}
+.hero_heading {
+  text-transform: uppercase;
+  font-weight: 700px;
+  font-size: 6.4rem;
+}
+.hero_para {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  max-width: 60rem;
+}
+/* //  ------------------------------------------
+---------  hero section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+---------  bio section  css start here -------
+------------------------------------------------- // */
+.bio_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bio_img img {
+  width: 80%;
+  box-shadow: -2rem -2rem 0 0 var(--helper);
+  display: inline-block;
+}
+.bio_content h2,
+.latest_works_content h2,
+.service_section_header h2,
+.testimonial_header h2,
+.contact_header h2 {
+  position: relative;
+  font-weight: 600;
+  font-size: 4.6rem;
+  margin-bottom: 6rem;
+  text-transform: capitalize;
+}
+.bio_content h2::before,
+.latest_works_content h2::before,
+.service_section_header h2::before,
+.testimonial_header h2::before,
+.contact_header h2::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--helper);
+}
+.bio_content h2::after,
+.latest_works_content h2::after,
+.service_section_header h2::after,
+.testimonial_header h2::after,
+.contact_header h2::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 1.5rem;
+  min-width: 20rem;
+  height: 0.3rem;
+  background-color: var(--helper);
+}
+.bio_data_stats {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  padding: 6.4rem 0rem;
+}
+.bio_stats h3 {
+  margin-bottom: 1rem;
+}
+.bio_progress_bar {
+  width: 90%;
+  height: 0.8rem;
+  background: var(--para-tint);
+  border-radius: 10rem;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+.bio_progress_bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: 80%;
+  background: var(--gradientSupport);
+  border-radius: 10rem;
+}
+.bio_progress_bar2::before {
+  width: 99%;
+}
+.bio_progress_bar3::before {
+  width: 90%;
+}
+.bio_progress_bar4::before {
+  width: 85%;
+}
+.bio_progress_bar5::before {
+  width: 70%;
+}
+
+.bio_progress_bar span {
+  position: absolute;
+  top: 1.8rem;
+  width: 4rem;
+  height: 2rem;
+  background: var(--helper);
+  color: var(--white);
+  border: none;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bio_progress_bar2 span {
+  left: 95%;
+}
+.bio_progress_bar3 span {
+  left: 86%;
+}
+.bio_progress_bar4 span {
+  left: 81%;
+}
+.bio_progress_bar5 span {
+  left: 66%;
+}
+.bio_progress_bar span::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.8rem solid var(--helper);
+  border-color: transparent;
+  border-bottom-color: var(--helper);
+  top: -1.6rem;
+}
+
+/* //  ------------------------------------------
+--------- bio section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- latest works section css start from here -------
+------------------------------------------------- // */
+.latest_work {
+  background: var(--bg);
+  transition: all 0.7s linear;
+}
+.project_img img {
+  border-radius: 7px;
+  width: 100%;
+  overflow: hidden;
+}
+.latest_works_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin: 6.4rem 0rem;
+}
+.overlay {
+  position: relative;
+  overflow: hidden;
+}
+.img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gradientSupport);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(100%);
+  justify-content: center;
+  transition: all 0.3s linear;
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.p-btn-active {
+  transform: translateY(-1rem);
+}
+.p-btn-not-active {
+  display: none;
+}
+.overlay:hover > .img_overlay {
+  transform: translateY(0);
+  opacity: 0.8;
+  cursor: pointer;
+}
+.img_overlay a {
+  margin: 0;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#project_details {
+  gap: 3.2rem;
+}
+/* //  ------------------------------------------
+--------- latest works section css end here -------
+------------------------------------------------- // */
+
+/* total work data section css start from here  */
+
+.word_data_section {
+  background: var(--gradientSupport);
+  text-align: center;
+  transition: all 0.7s linear;
+  color: var(--white);
+}
+.counter-number {
+  font-size: 4.8rem;
+}
+.word_data_section p {
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+/* total work data section css end here  */
+
+/* //  ------------------------------------------
+--------- service section css start here -------
+------------------------------------------------- // */
+
+.service_section_boxs {
+  margin-top: 10rem;
+  row-gap: 10rem;
+}
+.service_box {
+  box-shadow: var(--shadow);
+  text-align: center;
+  border-radius: 5px;
+  padding: 6.4rem 3.4rem;
+  transition: all 0.2s linear;
+}
+.service_box:hover,
+.service_box:active {
+  transform: translateY(-3rem);
+}
+.service-icon {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--icons-bg);
+  display: inline-block;
+  border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: var(--heading);
+  animation: water-wave 3s linear infinite;
+}
+.service-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  background: transparent;
+  border: 1px solid var(--black);
+  animation: water-wave 3s linear infinite;
+}
+
+@keyframes water-wave {
+  0% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+  50% {
+    border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
+  }
+  100% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+}
+.service_box h3 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+/* //  ------------------------------------------
+--------- latest works section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- testimonial section css start from here -------
+------------------------------------------------- // */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial_box_header {
+  padding: 5rem 8rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  text-align: left;
+  position: relative;
+}
+.testimonial_box_header::before {
+  content: "";
+  position: absolute;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5rem solid var(--white);
+  border-color: transparent;
+  border-top-color: var(--helper-tint);
+}
+.testimonial_box_header p::before {
+  content: "\f10d";
+  position: absolute;
+  top: 0;
+  font-weight: 900;
+  left: 2rem;
+  font-size: 5rem;
+  font-family: "font awesome 6 free";
+  color: #ced3ff;
+}
+.testimonial_box_header p::after {
+  content: "\f10e";
+  position: absolute;
+  bottom: 0;
+  font-weight: 900;
+  right: 2rem;
+  font-size: 5rem;
+  font-family: "font awesome 6 free";
+  color: #ced3ff;
+}
+.testimonial_account_details img {
+  width: 10rem;
+  height: 10rem;
+  justify-content: flex-end;
+  border-radius: 50%;
+  border: 0.5rem solid #ced3ff;
+}
+.testimonial_single_box {
+  margin-bottom: 6rem;
+}
+.testi_profile_img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.testimonial_account_details {
+  align-items: center;
+  margin-top: 3.2rem;
+  gap: 1.4rem;
+}
+.testi_profile_details {
+  text-align: start;
+}
+/* //  ------------------------------------------
+--------- testimonial section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- freelancing section css start from here -------
+------------------------------------------------- // */
+.freelancing_section {
+  background-image: url(..//images/folio/3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+.freelancing_sec_overlay {
+  content: "";
+  background: var(--overlay);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+}
+.freelancing_sec_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+.freelancing_sec_content h2 {
+  font-size: 5.4rem;
+  margin-bottom: 1.8rem;
+  color: var(--white);
+}
+.freelancing_sec_content h2 span {
+  color: #a0f669;
+}
+.freelancing_sec_content p {
+  margin-bottom: 1.8rem;
+  color: #fff;
+}
+/* //  ------------------------------------------
+--------- freelancing section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- contact us section css start from here -------
+------------------------------------------------- // */
+
+.contact_section {
+  max-width: 70rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+  transition: all 0.3s linear;
+}
+.contact_form .grid {
+  gap: 3.2rem;
+}
+.contact_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.contact_form input,
+.contact_form textarea {
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid #c9c9c9;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-family: "work sans";
+  width: 100%;
+}
+.contact_form form a {
+  max-width: 30%;
+}
+
+/* //  ------------------------------------------
+--------- contact us section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- footer section css end here -------
+------------------------------------------------- // */
+
+.footer_section {
+  background-color: rgb(0 10 45);
+}
+.footer_section h3 {
+  color: #fff;
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.footer-about p {
+  color: #adadad;
+}
+.footer-links ul,
+.footer-service ul,
+.footer-address address {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  justify-content: center;
+  list-style: none;
+}
+.footer-links li,
+.footer-service li {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #adadad;
+}
+.footer-links li a,
+.footer-service li a {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: #adadad;
+}
+.footer-address ul li span {
+  margin-right: 1rem;
+}
+.footer_bottom_icons {
+  margin: 5rem 0;
+  text-align: center;
+  color: #adadad;
+}
+.footer_bottom_icons .icons {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(144 172 209 / 20%);
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: var(--heading);
+  animation: water-wave 3s linear infinite;
+  color: var(--third);
+}
+.f-credits p {
+  text-align: center;
+  color: #adadad;
+}
+/* //  ------------------------------------------
+--------- footer section css end here -------
+------------------------------------------------- // */
+
+/* //  ------------------------------------------
+--------- scroll to top section css start from here -------
+------------------------------------------------- // */
+.scroll-to-top {
+  position: fixed;
+  z-index: 1;
+  right: 2%;
+  bottom: 3%;
+}
+.scroll-top {
+  width: 4rem;
+  height: 4rem;
+  background: var(--helper);
+  display: inline-block;
+  padding: 1.4rem 1.8rem;
+  position: relative;
+  color: var(--white);
+  animation: water-wave 3s linear infinite;
+  cursor: pointer;
+}
+
+/* responsive css  */ /* responsive css  */ /* responsive css  */
+/* responsive css  */ /* responsive css  */ /* responsive css  */
+
+@media (max-width: 980px) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+    border: 3px solid var(--black);
+    color: #212529;
+  }
+  .mobile-nav-icon {
+    height: 5rem;
+    color: var(--black);
+    width: 5rem;
+  }
+}
